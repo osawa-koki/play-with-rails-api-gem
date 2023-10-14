@@ -29,3 +29,4 @@ rails server --port 8000
 | --- | --- |
 | RAILS_ENV | Railsの実行環境を指定します。 |
 | ALLOWED_HOST | 許可するホストを指定します。 |
+| SECRET_KEY_BASE | Railsのシークレットキーを指定します。 |
