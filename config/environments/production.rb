@@ -85,4 +85,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # すべてのホストを許可する。
+  config.hosts << IPAddr.new("0.0.0.0/0")
+  config.hosts << IPAddr.new("::/0")
 end
