@@ -22,3 +22,10 @@ rails db:seed
 
 rails server --port 8000
 ```
+
+## 環境変数
+
+| 環境変数名 | 説明 |
+| --- | --- |
+| RAILS_ENV | Railsの実行環境を指定します。 |
+| ALLOWED_HOST | 許可するホストを指定します。 |
