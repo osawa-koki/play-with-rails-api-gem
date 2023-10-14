@@ -1,24 +1,15 @@
-# README
+# my-api-mode-rails-template
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+🎇🎇🎇 APIモードのRailsテンプレートです！  
 
-Things you may want to cover:
+## 実行方法
 
-* Ruby version
+```shell
+bundle install
 
-* System dependencies
+rails db:create
+rails db:migrate
+rails db:seed
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails server --port 8000
+```
