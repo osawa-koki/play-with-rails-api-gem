@@ -1,5 +1,6 @@
 FROM ruby:3.2.2
 WORKDIR /app
+EXPOSE 8000
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 COPY . .
