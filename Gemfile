@@ -52,4 +52,5 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'annotate', '>= 3.2.0', require: false
+  gem 'letter_opener_web', '~> 2.0.0'
 end
