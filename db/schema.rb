@@ -12,5 +12,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 20_231_014_141_218) do
+  create_table 'my_pokemons', force: :cascade do |t|
+    t.string 'name'
+    t.string 'nickname'
+    t.integer 'level'
+    t.float 'hp'
+    t.float 'max_hp'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
 end
