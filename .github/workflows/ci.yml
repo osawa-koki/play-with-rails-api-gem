@@ -21,7 +21,7 @@ jobs:
         working-directory: ${{ env.server-directory }}
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Use Ruby
       uses: ruby/setup-ruby@v1
       with:
