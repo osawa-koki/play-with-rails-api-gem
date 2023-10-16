@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :settings do
         collection do
           get :envs
+          get :constants
         end
       end
     end

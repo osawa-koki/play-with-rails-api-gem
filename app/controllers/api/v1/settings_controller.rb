@@ -11,6 +11,14 @@ module Api
           ENV3: ENV['ENV3']
         }
       end
+
+      def constants
+        render json: {
+          key1: Settings.group[:key1],
+          key2: Settings.group[:key2],
+          key3: Settings.group[:key3]
+        }
+      end
     end
   end
 end
