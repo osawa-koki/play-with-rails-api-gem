@@ -6,8 +6,7 @@ module Api
     class MailsController < ApplicationController
       def create
         WelcomeMailer.with(mail_params).hello.deliver_now
-      rescue StandardError => e
-        render json: { error: e.message }, status: :unprocessable_entity
+        render json: { message: 'Email sent successfully' }, status: :ok
       end
 
       private
