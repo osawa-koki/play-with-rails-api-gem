@@ -6,9 +6,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  if Rails.env.development?
-    mount LetterOpenerWeb::Engine, at: "/letter_opener"
-  end
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 
   namespace :api do
     namespace :v1 do
@@ -20,6 +18,8 @@ Rails.application.routes.draw do
           get :constants
         end
       end
+
+      resources :mails, only: %i[create]
     end
   end
 end
