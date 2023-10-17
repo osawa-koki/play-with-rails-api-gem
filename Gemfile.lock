@@ -260,7 +260,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.6)
   rubocop (~> 1.57.0)
-  rubocop-rails
+  rubocop-rails (~> 2.21.2)
   sqlite3 (~> 1.4)
   tzinfo-data
 
