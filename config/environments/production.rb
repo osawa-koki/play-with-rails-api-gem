@@ -97,4 +97,6 @@ Rails.application.configure do
 
   # 許可するホストを指定。
   config.hosts << ENV['ALLOWED_HOST']
+
+  routes.default_url_options[:host] = ENV['HOST']
 end
