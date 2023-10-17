@@ -1,0 +1,9 @@
+
+# schema.rbは自動生成されるので無視する
+AllCops:
+  Exclude:
+    - ./db/schema.rb
+    - ./db/migrate/**/*
+    - ./vendor/bundle/**/*
+    - ./bin/**/*
+    - ./config/**/*
