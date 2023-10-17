@@ -96,7 +96,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # 許可するホストを指定。
-  config.hosts << ENV['ALLOWED_HOST']
+  config.hosts << ENV['HOST']
 
   routes.default_url_options[:host] = ENV['HOST']
 end
