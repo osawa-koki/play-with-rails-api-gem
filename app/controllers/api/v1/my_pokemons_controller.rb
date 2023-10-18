@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require './app/tools/pagination'
+
 module Api
   module V1
     # MyPokemonsController
@@ -11,13 +13,7 @@ module Api
         my_pokemons = @my_pokemons.page(params[:page])
         render json: {
           data: @my_pokemons,
-          pagination: {
-            current_page: my_pokemons.current_page,
-            next_page: my_pokemons.next_page,
-            prev_page: my_pokemons.prev_page,
-            total_pages: my_pokemons.total_pages,
-            total_count: my_pokemons.total_count
-          }
+          pagination: Pagination.new(data: my_pokemons).pagination
         }
       end
 
