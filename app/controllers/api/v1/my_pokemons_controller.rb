@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require './app/tools/pagination'
+
 module Api
   module V1
     # MyPokemonsController
@@ -8,7 +10,11 @@ module Api
       before_action :set_my_pokemons, only: %i[index]
 
       def index
-        render json: @my_pokemons
+        my_pokemons = @my_pokemons.page(params[:page])
+        render json: {
+          data: @my_pokemons,
+          pagination: Pagination.new(data: my_pokemons).pagination
+        }
       end
 
       def add_avatar
