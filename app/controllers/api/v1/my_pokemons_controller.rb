@@ -8,7 +8,17 @@ module Api
       before_action :set_my_pokemons, only: %i[index]
 
       def index
-        render json: @my_pokemons
+        my_pokemons = @my_pokemons.page(params[:page])
+        render json: {
+          data: @my_pokemons,
+          pagination: {
+            current_page: my_pokemons.current_page,
+            next_page: my_pokemons.next_page,
+            prev_page: my_pokemons.prev_page,
+            total_pages: my_pokemons.total_pages,
+            total_count: my_pokemons.total_count
+          }
+        }
       end
 
       def add_avatar
