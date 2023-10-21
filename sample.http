@@ -1,0 +1,39 @@
+GET http://localhost:8000/api/v1/settings/envs
+# 環境変数で設定されている値を取得する。
+
+###
+
+GET http://localhost:8000/api/v1/settings/constants
+# 定数で設定されている値を取得する。
+
+###
+
+POST http://localhost:8000/api/v1/mails
+# 送信されたメールは`http://localhost:8000/letter_opener`で確認できる！
+
+{
+  "to": "to@example.com",
+  "subject": "subject",
+  "message": "message",
+  "cc": ["cc1@example.com", "cc2@example.com", "cc3@example.com"],
+  "bcc": ["bcc1@example.com", "bcc2@example.com", "bcc3@example.com"]
+}
+
+###
+
+GET http://localhost:8000/api/v1/my_pokemons
+# ポケモン一覧を取得する。
+
+###
+
+POST http://localhost:8000/api/v1/my_pokemons/1/add_avatar
+# アバターを追加する。
+# `active_storage`を使用している。
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="avator"; filename="avator"
+Content-Type: image/png
+
+< ./tako.png
+--MyBoundary--
